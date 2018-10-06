@@ -34,7 +34,8 @@ class C_ide extends REST_Controller {
             
                     'judul_ide'          => $this->post('judul_ide'),
                     'foto_ide'          => $this->post('foto_ide'),
-                    'deskripsi_ide'        => $this->post('deskripsi_ide'));
+                    'deskripsi_ide'        => $this->post('deskripsi_ide'),
+                    'despanjang_ide'        => $this->post('despanjang_ide'));
         $insert = $this->db->insert('ide', $data);
         if ($insert) {
             $this->response($data, 200);
@@ -50,7 +51,8 @@ class C_ide extends REST_Controller {
                 
                     'judul_ide'          => $this->put('judul_ide'),
                     'foto_ide'          => $this->put('foto_ide'),
-                    'deskripsi_ide'        => $this->put('deskripsi_ide'));
+                    'deskripsi_ide'        => $this->put('deskripsi_ide'),
+                    'despanjang_ide'        => $this->post('despanjang_ide'));
         $this->db->where('id_ide', $id_ide);
         $update = $this->db->update('ide', $data);
         if ($update) {
