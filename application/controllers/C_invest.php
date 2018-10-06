@@ -25,13 +25,13 @@ class C_invest extends REST_Controller {
         ), 404);
             }  
         }
-       
     }
  
     // insert new data to id_invest
     function index_post() {
         $data = array(
-            
+                    'pemilik_invest'          => $this->post('pemilik_invest'),
+                    'alamat_invest'          => $this->post('alamat_invest'),  
                     'nama_invest'          => $this->post('nama_invest'),
                     'foto_invest'          => $this->post('foto_invest'),
                     'waktu_invest'        => $this->post('waktu_invest'),
@@ -51,6 +51,8 @@ class C_invest extends REST_Controller {
         $id_invest = $this->put('id_invest');
         $data = array(
                 
+                    'pemilik_invest'          => $this->post('pemilik_invest'),
+                    'alamat_invest'          => $this->post('alamat_invest'),
                     'nama_invest'          => $this->post('nama_invest'),
                     'foto_invest'          => $this->post('foto_invest'),
                     'waktu_invest'        => $this->post('waktu_invest'),
